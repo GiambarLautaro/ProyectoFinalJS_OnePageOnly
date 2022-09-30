@@ -658,6 +658,12 @@ li:hover {
   color: #ffc107;
 }
 
+@media screen and (max-width: 768px) {
+  .Programs {
+    padding-top: 420px;
+    // background-color: #0d6efd;
+  }
+}
 /*# sourceMappingURL=index.css.map */
 
 //gris tipico de dark modes  #1a1e26

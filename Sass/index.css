@@ -680,4 +680,9 @@ body.dark li:hover {
   color: #ffc107;
 }
 
+@media screen and (max-width: 768px) {
+  .Programs {
+    padding-top: 420px;
+  }
+}
 /*# sourceMappingURL=index.css.map *//*# sourceMappingURL=index.css.map */
