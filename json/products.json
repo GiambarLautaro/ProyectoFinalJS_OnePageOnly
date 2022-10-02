@@ -4,7 +4,7 @@
     "duration": "6 months",
     "name": "Instant Funding ",
     "price": 600,
-    "categogy": "Standard",
+    "category": "Standard",
     "img": "https://d31dn7nfpuwjnm.cloudfront.net/images/valoraciones/0040/3221/como-empezar-estudiar-trading.jpg?1603188525",
     "info": "The most comfortable way to pass a propietary trading evaluation, no pressure, no second phase exam, just reach target and start trading like a Pro"
   },
@@ -13,7 +13,7 @@
     "duration": "3 months",
     "name": "To The Moon ",
     "price": 2500,
-    "categogy": "Standard",
+    "category": "Standard",
     "img": "https://bpcdn.co/images/2017/12/24014435/bitcoin-to-the-moon.png",
     "info": "info del examen"
   },
@@ -22,7 +22,7 @@
     "duration": "12 months",
     "name": "Bootcamp ",
     "price": 80,
-    "categogy": "Standard",
+    "category": "Standard",
     "img": "https://inversionesytrading.com/wp-content/uploads/2020/10/bootcamp-fondo6.jpg",
     "info": "info del examen"
   },
@@ -32,7 +32,7 @@
     "duration": "6 months",
     "name": "Instant Funding (M)",
     "price": 500,
-    "categogy": "Medium",
+    "category": "Medium",
     "img": "https://d31dn7nfpuwjnm.cloudfront.net/images/valoraciones/0040/3221/como-empezar-estudiar-trading.jpg?1603188525",
     "info": "info del examen"
   },
@@ -41,7 +41,7 @@
     "duration": "3 months",
     "name": "To The Moon (M)",
     "price": 1800,
-    "categogy": "Medium",
+    "category": "Medium",
     "img": "https://bpcdn.co/images/2017/12/24014435/bitcoin-to-the-moon.png",
     "info": "info del examen"
   },
@@ -50,7 +50,7 @@
     "duration": "12 months",
     "name": "Bootcamp (M)",
     "price": 50,
-    "categogy": "Medium",
+    "category": "Medium",
     "img": "https://inversionesytrading.com/wp-content/uploads/2020/10/bootcamp-fondo6.jpg",
     "info": "info del examen"
   },
@@ -59,7 +59,7 @@
     "duration": "6 months",
     "name": "Instant Funding (S)",
     "price": 270,
-    "categogy": "Small",
+    "category": "Small",
     "img": "https://d31dn7nfpuwjnm.cloudfront.net/images/valoraciones/0040/3221/como-empezar-estudiar-trading.jpg?1603188525",
     "info": "info del examen"
   },
@@ -68,7 +68,7 @@
     "duration": "3 months",
     "name": "To The Moon (S)",
     "price": 1500,
-    "categogy": "Small",
+    "category": "Small",
     "img": "https://bpcdn.co/images/2017/12/24014435/bitcoin-to-the-moon.png",
     "info": "info del examen"
   },
@@ -77,7 +77,7 @@
     "duration": "12 months",
     "name": "Bootcamp (S)",
     "price": 30,
-    "categogy": "Small",
+    "category": "Small",
     "img": "https://inversionesytrading.com/wp-content/uploads/2020/10/bootcamp-fondo6.jpg",
     "info": "This is the perfet exam type if you are a begginer in the trading world"
   }

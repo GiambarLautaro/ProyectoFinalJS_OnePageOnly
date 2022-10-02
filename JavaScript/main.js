@@ -37,99 +37,25 @@ ScrollReveal().reveal(".testimonio3", { delay: 300 });
 
 // PRODUCTOS Y CARRITO (PROGRAMS)
 
-// let products = [
-//   {
-//     id: 0,
-//     duration: "6 months",
-//     name: "Instant Funding ",
-//     price: 600,
-//     categogy: "Standard",
-//     img: "https://d31dn7nfpuwjnm.cloudfront.net/images/valoraciones/0040/3221/como-empezar-estudiar-trading.jpg?1603188525",
-//     info: "The most comfortable way to pass a propietary trading evaluation, no pressure, no second phase exam, just reach target and start trading like a Pro",
-//   },
-//   {
-//     id: 1,
-//     duration: "3 months",
-//     name: "To The Moon ",
-//     price: 2500,
-//     categogy: "Standard",
-//     img: "https://bpcdn.co/images/2017/12/24014435/bitcoin-to-the-moon.png",
-//     info: "info del examen",
-//   },
-//   {
-//     id: 2,
-//     duration: "12 months",
-//     name: "Bootcamp ",
-//     price: 80,
-//     categogy: "Standard",
-//     img: "https://inversionesytrading.com/wp-content/uploads/2020/10/bootcamp-fondo6.jpg",
-//     info: "info del examen",
-//   },
-
-//   {
-//     id: 3,
-//     duration: "6 months",
-//     name: "Instant Funding (M)",
-//     price: 500,
-//     categogy: "Medium",
-//     img: "https://d31dn7nfpuwjnm.cloudfront.net/images/valoraciones/0040/3221/como-empezar-estudiar-trading.jpg?1603188525",
-//     info: "info del examen",
-//   },
-//   {
-//     id: 4,
-//     duration: "3 months",
-//     name: "To The Moon (M)",
-//     price: 1800,
-//     categogy: "Medium",
-//     img: "https://bpcdn.co/images/2017/12/24014435/bitcoin-to-the-moon.png",
-//     info: "info del examen",
-//   },
-//   {
-//     id: 5,
-//     duration: "12 months",
-//     name: "Bootcamp (M)",
-//     price: 50,
-//     categogy: "Medium",
-//     img: "https://inversionesytrading.com/wp-content/uploads/2020/10/bootcamp-fondo6.jpg",
-//     info: "info del examen",
-//   },
-//   {
-//     id: 6,
-//     duration: "6 months",
-//     name: "Instant Funding (S)",
-//     price: 270,
-//     categogy: "Small",
-//     img: "https://d31dn7nfpuwjnm.cloudfront.net/images/valoraciones/0040/3221/como-empezar-estudiar-trading.jpg?1603188525",
-//     info: "info del examen",
-//   },
-//   {
-//     id: 7,
-//     duration: "3 months",
-//     name: "To The Moon (S)",
-//     price: 1500,
-//     categogy: "Small",
-//     img: "https://bpcdn.co/images/2017/12/24014435/bitcoin-to-the-moon.png",
-//     info: "info del examen",
-//   },
-//   {
-//     id: 8,
-//     duration: "12 months",
-//     name: "Bootcamp (S)",
-//     price: 30,
-//     categogy: "Small",
-//     img: "https://inversionesytrading.com/wp-content/uploads/2020/10/bootcamp-fondo6.jpg",
-//     info: "This is the perfet exam type if you are a begginer in the trading world",
-//   },
-// ];
-// const productsCopy = [...products];
 let cart = [];
 let productsglobal = [];
 
-function setCategoryFilter(categogy) {
-  // products = [...productsCopy];
-  if (categogy == "Standard" || categogy == "Medium" || categogy == "Small") {
-    productsglobal = productsglobal.filter((item) => item.categogy == categogy);
-  }
+function setCategoryFilter() {
+  fetch("../json/products.json")
+    .then((res) => res.json())
+    .then((category) => {
+      // products = [...productsCopy];
+      if (
+        category == "Standard" ||
+        category == "Medium" ||
+        category == "Small"
+      ) {
+        products = category.filter((item) => item.category == category);
+      }
+    })
+    .catch((e) => {
+      console.log(e);
+    });
 
   renderProducts();
 }
@@ -155,7 +81,7 @@ function renderProducts() {
             products[i].duration
           } </li>
           <li class="list-group-item bg-dark text-white ">${
-            products[i].categogy
+            products[i].category
           }</li>
           <li class="list-group-item bg-dark text-white"> U$D ${
             products[i].price
@@ -176,14 +102,27 @@ function renderProducts() {
     });
 }
 
-// function setCategoryFilter(categogy) {
-//   products = [...productsCopy];
-//   if (categogy == "Standard" || categogy == "Medium" || categogy == "Small") {
-//     products = products.filter((item) => item.categogy == categogy);
-//   }
+function setCategoryFilter() {
+  fetch("../json/products.json")
+    .then((res) => res.json())
+    .then((category) => {
+      // products = [...productsCopy];
+      if (
+        category == "Standard" ||
+        category == "Medium" ||
+        category == "Small"
+      ) {
+        productsglobal = productsglobal.filter(
+          (item) => item.category == category
+        );
+      }
+    })
+    .catch((e) => {
+      console.log(e);
+    });
 
-//   renderProducts();
-// }
+  renderProducts();
+}
 
 function renderCart() {
   if (cart.length == 0) {
@@ -203,7 +142,7 @@ function renderCart() {
         </div>
         <ul class="list-group list-group-flush ">
           <li class="list-group-item bg-dark text-white ">Trading Period: ${cart[i].duration} </li>
-          <li class="list-group-item bg-dark text-white ">${cart[i].categogy}</li>
+          <li class="list-group-item bg-dark text-white ">${cart[i].category}</li>
           <li class="list-group-item bg-dark text-white "> U$D ${cart[i].price}</li>
         </ul>
         <div class="card-body">
