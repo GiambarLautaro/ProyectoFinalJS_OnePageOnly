@@ -517,12 +517,12 @@
   <div id="Help" class="Help">
 
     <div class="container">
-      <form action="https://formsubmit.co/a75fc759e6514ad93df71170b914f661" method="POST">
+      <form id="form">
         <i class="fas fa-paper-plane"></i>
 
         <div class="input-group">
           <label>Full Name</label>
-          <input type="text" name="name" placeholder="Enter your name" id="contact-name" onkeyup="validateName()" />
+          <input type="text" name="name" placeholder="Enter your name" id="contact-name" onkeyup="validateName() " />
           <span id="name-error"></span>
         </div>
 
@@ -545,9 +545,15 @@
           <span id="message-error"></span>
         </div>
 
-        <button onclick="return validateForm()">Submit</button>
+        <button id="boton" onclick="return validateForm()">Submit</button>
         <span id="submit-error"></span>
       </form>
+      <script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<script type="text/javascript">
+  emailjs.init('dTLf-MkDCQPSCGSSE')
+</script>
     </div>
 
 
@@ -610,6 +616,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="Javascript/send-email.js"></script>
   <script src="JavaScript/main.js"></script>
 
 </html>

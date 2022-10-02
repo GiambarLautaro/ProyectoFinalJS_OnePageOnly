@@ -357,12 +357,3 @@ function validateForm() {
     return false;
   }
 }
-
-// API POKEMON
-// fetch("https://pokeapi.co/api/v2/pokemon/ditto")
-//   .then((res) => res.json())
-//   .then((products) => {
-//     console.log(products);
-//   });
-
-// const array1 = required('D:\Escritorio\Curso Coder JavaScript\Latam Funds Single Page\json\products.json')
